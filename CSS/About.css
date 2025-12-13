@@ -1,0 +1,40 @@
+
+
+
+/* FOOTER STYLES */
+.footer-about {
+    padding-top: 35px;
+}
+
+#contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--paper-beige);
+    background-color: rgba(255,255,255,0.15);
+    transition: 
+        transform 0.3s ease-in-out,
+        filter 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.1) rotate(-5deg);
+        fill: var(--oni-black);
+    }
+
+    & svg{
+        width: 22px;
+        height: 22px;
+    }
+}
+

@@ -1,0 +1,186 @@
+/* ========== SECCIÓN PRINCIPAL ========== */
+.intro-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "description description photo"
+        ". . seals";
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.card {
+    background-color: var(--paper-beige);
+    padding: 25px;
+
+    /* ANIMACIÓN FALL-IN */
+    opacity: 0;
+    transform: translateY(-20px) rotate(-1deg);
+    animation: fallIn 0.8s ease-out forwards;
+
+    /* BORDE QUE SE DIBUJA*/
+    position: relative;
+    overflow: visible;
+    border: 3px solid transparent;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 3px solid var(--oni-black);
+        border-radius: 15px;
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: drawBorder 0.8s ease-out forwards;
+    }
+
+    &:first-child { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.25s; }
+}
+
+.card-description {
+    grid-area: description;
+    width: 60%;
+    max-width: 520px;
+    margin: o auto;
+    height: auto;
+    border-radius: 15px;
+    position: relative;
+    left: 120px;
+    font-weight: 400;
+
+    &::before {
+        border-color: var(--oni-red);
+    }
+
+    & .intro-tittle {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    & p {
+        line-height: 1.55;
+    }
+
+    & .key-words {
+        font-weight: 700;
+        color: var(--oni-red);
+    }
+}
+
+.card-photo {
+    grid-area: photo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .09);
+    padding: 30px;
+    box-shadow: 
+        0 0 20px rgba(0,0,0,0.15),
+        inset 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 15px;
+
+    &::before {
+        border-color: var(--oni-black);
+    }
+
+    position: relative;
+    left: -120px;
+}
+
+.profile-picture {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    filter: contrast(1.05) saturate(1.1);
+    border: 5px solid var();
+    box-shadow:
+        0 0 15px var(--oni-red),
+        0 0 25px var(--ryu-green);
+    transition: transform 0.3s ease-out;
+}
+
+/* ESTILOS PARA LOS ICONOS */
+.intro-seals {
+    grid-area: seals;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+}
+
+.seal {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--oni-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    transition: transform 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.08);
+        filter: contrast(1.2);
+    }
+}
+
+.icon {
+    width: 30px;
+    height: 25px;
+    fill: var(--oni-black);
+    transition: transform 0.3s ease, fill 0.3s ease;
+    margin-bottom: 10px;
+    transform: translateY(-8px);
+    opacity: 0;
+    animation: iconFall 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+    align-self: center;
+}
+
+.seal-email {
+    border-color: var(--orange-red);
+    position: relative;
+    margin-top: 30px;
+    top: -80px;
+    left: 320px;
+
+    &:hover {
+        outline: 2px dashed transparent;
+        outline-offset: -4px;
+        mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
+}
+
+.seal-linkedin {
+    border-color: var(--deep-blue);
+    position: relative;
+    margin-top: 30px;
+    top: -80px;
+    left: 320px;
+
+    &:hover {
+        outline: 2px dashed transparent;
+        outline-offset: -4px;
+        mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
+}
+
+.seal-github {
+    border-color: var(--oni-black);
+    position: relative;
+    margin-top: 30px;
+    top: -80px;
+    left: 320px;
+
+    &:hover {
+        outline: 2px dashed transparent;
+        outline-offset: -4px;
+        mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
+}

@@ -1,0 +1,23 @@
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background-color: var(--oni-black);
+    color: var(--text-light);
+    font-size: 0.9rem;
+
+    /* EFECTO DE DESENFOQUE DEL CONTENIDO */
+    backdrop-filter: blur(2px);
+    /* DEGRADADO INFERIOR PARA TRANSICIONAR EL BLUR */
+    mask-image: linear-gradient(to top, var(--oni-black) 95%, transparent 100%);
+    
+    &::after{
+        content: "志道";
+        display: block;
+        margin-top: 8px;
+        font-size: 1.3rem;
+        color: var(--oni-red);
+        opacity: 0.8;
+    }
+}

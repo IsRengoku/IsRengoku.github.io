@@ -1,0 +1,43 @@
+/* ANIMACIÓN DE CAIDA DE OBJETOS */
+@keyframes fallIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) rotate(-3deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* ANIMACIÓN DE DIBUJO DE BORDE */
+@keyframes drawBorder {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* ANIMACIÓN PARA CAIDA DE ICONOS */
+@keyframes iconFall {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ANIMACIÓN DE REVELADO DEL HEADER */
+@keyframes headerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
