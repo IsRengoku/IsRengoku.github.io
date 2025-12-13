@@ -1,7 +1,6 @@
 /* ========== TIPOGRAFÍA ========== */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
-
 /* ==================== COLORS ==================== */
 :root {
     --oni-red: #A10D0D;
@@ -9,10 +8,12 @@
     --paper-beige: #EFE7D5;
     --sumi-gray: #3A3A3A;
     --ryu-green: #0F6A41;
-    --ryu-gold:  #C19A3F;
+    --ryu-gold:  #DAA520;
+    --deel-blue: #00008B;
+    --ligth-blue: #0B5369;
+    --orange-red: #FF4500;
     --text-light: #F2F2F2;
 }
-
 
 /* ========== GLOBAL ========== */
 body {
@@ -34,8 +35,19 @@ body {
 
 }
 
-
 /* ========== HEADER ========== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 
 header {
     background-color: var(--oni-black);
@@ -52,17 +64,40 @@ header {
     mask-image: linear-gradient(to bottom, var(--oni-black) 90%, transparent 100%);
 }
 
+@keyframes headerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
 header h1 {
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 1px;
     margin: 0;
+
+    opacity: 0;
+    transform: translateY(-6px);
+    animation: headerReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    opacity: 0;
+    transform: translateY(-6px);
+    animation: headerReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
 }
 
 nav ul {
@@ -113,10 +148,11 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
         "description description photo"
-        "contact-e contact-g contact-l";
+        ". . seals";
     align-items: center;
     gap: 15px;
-    padding: 50px;
+    padding: 30px;
+    padding-bottom: 0;
 }
 
 .card {
@@ -144,19 +180,10 @@ nav a {
         transform-origin: left;
         animation: drawBorder 0.8s ease-out forwards;
     }
+
+    &:first-child { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.25s; }
 }
-
-.card-description::before { border-color: var(--oni-red); }
-.card-photo::before { border-color: var(--oni-black); }
-.card-contact-email::before { border-color: var(--ryu-gold); }
-.card-contact-github::before { border-color: var(--sumi-gray); }
-.card-contact-linkedin::before { border-color: var(--ryu-green); }
-
-.card:first-child { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.25s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-.card:nth-child(4) { animation-delay: 0.55s; }
-.card:last-child { animation-delay: 0.7s; }
 
 @keyframes fallIn {
     0% {
@@ -182,7 +209,22 @@ nav a {
 
 .card-description {
     grid-area: description;
+    width: 60%;
+    height: 220px;
     border-radius: 15px;
+    text-align: center;
+    position: relative;
+    left: 120px;
+    font-weight: 400;
+
+    &::before {
+        border-color: var(--oni-red);
+    }
+
+    & .key-words {
+        font-weight: 700;
+        color: var(--oni-red);
+    }
 }
 
 .card-photo {
@@ -197,6 +239,12 @@ nav a {
         inset 0 0 10px rgba(0,0,0,0.2);
     border-radius: 15px;
 
+    &::before {
+        border-color: var(--oni-black);
+    }
+
+    position: relative;
+    left: -120px;
 }
 
 .profile-picture {
@@ -208,67 +256,30 @@ nav a {
     border: 5px solid var();
     box-shadow:
         0 0 15px var(--oni-red),
-        0 0 25px var(--ryu-gold);
+        0 0 25px var(--ryu-green);
     transition: transform 0.3s ease-out;
 }
 
-.card-contact-email {
-    grid-area: contact-e;
-    text-align: center;
-    border-radius: 15px;
-
-    &:hover .icon {
-        transform: scale(1.15);
-    }
-}
-
-.card-contact-github {
-    grid-area: contact-g;
-    text-align: center;
-    border-radius: 15px;
-
-    &:hover .icon {
-        transform: scale(1.15);
-    }
-}
-
-.card-contact-linkedin {
-    grid-area: contact-l;
-    text-align: center;
-    border-radius: 15px;
-
-    &:hover .icon {
-        transform: scale(1.15);
-    }
-}
 
 /* ESTILOS PARA LOS ICONOS */
+.intro-seals {
+    grid-area: seals;
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+}
 
 .seal {
-    width: 70px;
-    height: 70px;
-    border: 4px solid var(--oni-black);
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--oni-black);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 8px;
-    margin-bottom: 12px;
+    padding: 6px;
     transition: transform 0.3s ease, border-color 0.3s ease, filter 0.3s ease;
     
-    /* Efecto tinta ligeramente imperfecta */
-    outline: 2px dashed transparent;
-    outline-offset: -4px;
-    mask-image: radial-gradient(circle, white 60%, transparent 100%);
-
-    & .icon {
-        width: 34px;
-        height: 34px;
-        fill: var(--oni-black);
-        transition: transform 0.3s ease, fill 0.3s ease;
-    }
-
     &:hover {
         transform: scale(1.08);
         filter: contrast(1.2);
@@ -276,9 +287,10 @@ nav a {
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 25px;
     fill: var(--oni-black);
+    transition: transform 0.3s ease, fill 0.3s ease;
     margin-bottom: 10px;
     transform: translateY(-8px);
     opacity: 0;
@@ -290,6 +302,48 @@ nav a {
 @keyframes iconFall {
     0% { opacity: 0; transform: translateY(-10px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+.seal-email {
+    border-color: var(--orange-red);
+    position: relative;
+    margin-top: 8px;
+    top: -80px;
+    left: 320px;
+
+    &:hover {
+        outline: 2px dashed transparent;
+        outline-offset: -4px;
+        mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
+}
+
+.seal-linkedin {
+    border-color: var(--deel-blue);
+    position: relative;
+    margin-top: 8px;
+    top: -80px;
+    left: 320px;
+
+    &:hover {
+        outline: 2px dashed transparent;
+        outline-offset: -4px;
+        mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
+}
+
+.seal-github {
+    border-color: var(--oni-black);
+    position: relative;
+    margin-top: 8px;
+    top: -80px;
+    left: 320px;
+
+    &:hover {
+        outline: 2px dashed transparent;
+        outline-offset: -4px;
+        mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
 }
 
 /* FOOTER */
@@ -307,7 +361,7 @@ footer {
     mask-image: linear-gradient(to top, var(--oni-black) 95%, transparent 100%);
     
     &::after{
-        content: "印";
+        content: "志道";
         display: block;
         margin-top: 8px;
         font-size: 1.3rem;

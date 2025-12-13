@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8"> <!-- codificación -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Para que sea adaptable -->
-    <title>Portafolio de Samuel Garcia - Desarrollador de Software Jr</title>
+    <title>Samuel Garcia - Desarrollador de Software Jr</title>
 
     <!-- SEO metas -->
     <meta name="robots" content="index, follow">
@@ -31,16 +31,16 @@
     <!-- ======== HEADER / NAV ======== -->
     <header>
         <nav>
-            <div>
-                <h1>Samuel Garcia - Software Developer</h1>
+            <div class="div-tittle">
+                <h1 class="site-tittle">Shidō Dev<span class="sr-only">Samuel Garcia</span></h1>
             </div>
-            <div>
-                <ul>
-                <li><a class="intro-link" href="About.html">Sobre mí</a></li>
-                <li><a class="intro-link" href="Projects.html">Proyectos</a></li>
-                <li><a class="intro-link" href="Skills.html">Habilidades</a></li>
-                <li><a class="intro-link" href="Documents/CV-Samuel Garcia-ES.pdf" download="CV-Samuel-Garcia-ES.pdf">CV</a></li>
-            </ul>
+            <div class="div-ul">
+                <ul class="nav-links">
+                    <li><a class="intro-link" href="About.html">Sobre mí</a></li>
+                    <li><a class="intro-link" href="Projects.html">Proyectos</a></li>
+                    <li><a class="intro-link" href="Skills.html">Habilidades</a></li>
+                    <li><a class="intro-link" href="Documents/CV-Samuel Garcia-ES.pdf" download="CV-Samuel-Garcia-ES.pdf">CV</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -50,9 +50,9 @@
         <section id="inicio" class="intro-section">
 
             <div class="card card-description">
-                <h2 class="intro-tittle">Hola, soy Samuel</h2>
+                <h2 class="intro-tittle">Hola, soy Samuel Garcia</h2>
                 <p class="intro-subtittle">Desarrollador de Software pronto a graduarse, 
-                    con enfoque Full-Stack e interesado por la IA.
+                    con enfoque <span class="key-words">Full-Stack</span>, al <span class="key-words">desarrollo web</span> e interesado por la <span class="key-words">IA</span>.
                 </p>
                 <p class="intro-description">Apasionado por construir soluciones eficientes, 
                     por ayudar y por aprender de ellas. 
@@ -65,28 +65,34 @@
                 alt="Samuel García, Desarrollador de Software Jr, foto frontal">
             </div>
 
-            <div class="card card-contact-email">
-                <div class="seal seal-email">
-                    <svg class="icon" viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </section>
+
+        <section id="contacto" class="intro-seals">
+
+            <div class="seal seal-email">
+                <a id="Email" class="icon icon-email" href="mailto:garcia.samuel.201118@gmail.com">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>                    
                     </svg>
-                </div>
+                </a>
             </div>
 
-            <div class="card card-contact-linkedin">
-                <div class="seal seal-linkedin">
-                    <svg class="icon" viewBox="0 0 24 24">
+            <div class="seal seal-linkedin">
+                <a id="Linkedin" class="icon icon-linkedin" rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/samuel-garcia-sierra-dev" target="_blank">
+                    <svg viewBox="0 0 24 24">
                         <path d="M4.98 3.5a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zM3 8.75h3.96V21H3V8.75zM9.75 8.75H13v1.67h.05c.45-.85 1.55-1.75 3.2-1.75 3.42 0 4.05 2.25 4.05 5.17V21H16.3v-6.17c0-1.47-.03-3.36-2.05-3.36-2.05 0-2.36 1.6-2.36 3.26V21H9.75V8.75z"/>
                     </svg>
-                </div>
+                </a>
             </div>
 
-            <div class="card card-contact-github">
-                <div class="seal seal-github">
-                    <svg class="icon" viewBox="0 0 24 24">
+            <div class="seal seal-github">
+                <a id="Github" class="icon icon-github" href="https://github.com/IsRengoku" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24">
                         <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.86 10.95.58.11.79-.25.79-.55v-2.1c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.7.08-.68.08-.68 1.17.09 1.78 1.2 1.78 1.2 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.72-1.55-2.56-.3-5.26-1.28-5.26-5.7 0-1.26.45-2.3 1.2-3.1-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.18a10.8 10.8 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.65.24 2.87.12 3.17.75.8 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.28 5.68.41.36.77 1.06.77 2.15v3.18c0 .3.2.67.8.55A10.99 10.99 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/>
                     </svg>
-                </div>
+                </a>
             </div>
 
         </section>
@@ -95,7 +101,7 @@
 
     <!-- ======== FOOTER ======== -->
     <footer>
-        <p>© 2025 Ryu Dev.</p>
+        <p>© 2025 Shidō Dev.</p>
     </footer>
 
 </body>
