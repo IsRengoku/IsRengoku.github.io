@@ -1,5 +1,88 @@
+/* GENERAL STYLES */
+.about-section {
+    max-width: 720px;
+    margin: 0 auto 90px;
+    padding: 28px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.85) 20%,
+            rgba(255,255,255,0.85) 80%,
+            rgba(255,255,255,0.65)
+        );
+    border-top: 1px solid rgba(0,0,0,0.18);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-radius: 10px;
+    animation: fadeUp 0.8s ease-out both;
+
+    & h2{
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    & h2::after{
+        content: "志";
+        font-size: 0.85rem;
+        color: var(--oni-red);
+        margin-left: 10px;
+        opacity: 0.8;
+    }
+
+    &:first-child{
+        margin-top: 45px;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ABOUT ME STYLES */
+.about-description {
+    line-height: 1.6;
+    max-width: 65ch;
+    margin-bottom: 18px;
+}
+
+/* STUDIES STYLES*/
 
 
+/* LANGUAGES STYLES*/
+
+
+/* EXPERIENCE STYLES */
+.experience-article {
+    margin-bottom: 40px;
+    
+    & p {
+        margin: 10px 0 0 0;
+        line-height: 1.6;
+    }
+}
+
+.experience-tittle-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+
+    & .experience-article-tittle{
+        font-weight: 500;
+        margin: 0;
+    }
+}
 
 /* FOOTER STYLES */
 .footer-about {

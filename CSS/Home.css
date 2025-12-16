@@ -1,4 +1,4 @@
-/* ========== SECCIÓN PRINCIPAL ========== */
+/* CARD STYLES */
 .intro-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -105,7 +105,7 @@
     transition: transform 0.3s ease-out;
 }
 
-/* ESTILOS PARA LOS ICONOS */
+/* ICONS STYLES */
 .intro-seals {
     grid-area: seals;
     display: flex;
