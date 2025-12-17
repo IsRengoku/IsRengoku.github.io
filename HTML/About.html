@@ -33,8 +33,8 @@
     <!-- ======== HEADER / NAV ======== -->
     <header>
         <nav>
-            <div class="div-tittle">
-                <h1 class="site-tittle">Shidō Dev<span class="sr-only">Samuel Garcia</span></h1>
+            <div class="div-title">
+                <h1 class="site-title">Shidō Dev<span class="sr-only">Samuel Garcia</span></h1>
             </div>
             <div class="div-ul">
                 <ul>
@@ -42,7 +42,7 @@
                     <li><a href="/HTML/Projects.html">Proyectos</a></li>
                     <li><a href="/HTML/Skills.html">Habilidades</a></li>
                     <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="Documents/CV-Samuel Garcia-ES.pdf" download="CV-Samuel-Garcia-ES.pdf">Descargar CV</a></li>
+                    <li><a href="Documents/CV-Samuel Garcia-ES.pdf" download="CV-Samuel-Garcia-ES.pdf">CV</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,56 +51,108 @@
     <main>
         <!-- ======== SOBRE MÍ ======== -->
         <section id="sobre-mi" class="about-section">
-            <h2 class="about-tittle">Sobre mí</h2>
+            <h2 class="about-title">Sobre mí</h2>
+            
             <p class="about-description">
-                Soy un desarrollador en formación con experiencia en C#, Java, Python, SQL y últimamente en desarrollo web. 
-                Me apasiona construir soluciones reales y aprender tecnologías de manera autodidacta.
+                Soy un desarrollador de software en formación con enfoque Full-Stack. He tenido 
+                experiencia en tecnologías como C#, Java, Python, SQL y desarrollo web.
             </p>
             <p class="about-description">
-                Actualmente, estoy creando mi portafolio para mostrar mis proyectos y seguir creciendo como desarrollador Full-Stack.
+                Disfruto analizar problemas, descomponerlos en soluciones simples y mejorar cada iteración del proceso. 
+                Me interesa entender no solo el “cómo”, sino también el “por qué” detrás de cada herramienta o 
+                decisión técnica.
             </p>
+            <p class="about-description">
+                Me considero una persona disciplinada, autodidacta y comprometida con hacer bien las cosas. 
+                Valoro el aprendizaje continuo, el trabajo bien estructurado y la mejora constante, 
+                tanto a nivel técnico como personal.
+            </p>
+            <p class="about-description">
+                Actualmente, me encuentro capacitandome, 
+                con el objetivo de consolidarme como desarrollador Full-Stack en la industria y 
+                aportar soluciones reales en entornos de trabajo colaborativos.
+            </p>
+
         </section>
 
         <!-- ======== ESTUDIOS ======== -->
         <section id="estudios" class="about-section">
-            <h2 class="studies-tittle">Estudios</h2>
+            <h2 class="studies-title">Estudios</h2>
 
-            <article class="studies-article">
-                <h3 class="studies-article-tittle">Tecnólogo en Desarrollo de Software</h3>
-                <p class="studies-article-inst"><strong>Institución:</strong> Instituto Tecnológico Metropolitano.</p>
-                <p class="studies-article-status"><strong>Estado:</strong> En curso - Graduación estimada: Enero - 2026.</p>
+            <article class="study-article">
+
+                <div class="study-header">
+                    <h3 class="study-article-title">Tecnólogo en Desarrollo de Software</h3>
+                    <span class="study-date">2023 - 2026</span>
+                </div>
+
+                <p class="study-article-inst">Instituto Tecnológico Metropolitano.</p>
+                <p class="study-article-status">En curso.</p>
             </article>
 
-            <article class="studies-article">
-                <h3 class="studies-article-tittle">Otros cursos y certificaciones</h3>
-                <ul>
-                    <li>Curso de HTML Básico - Midudev. 
-                        <a href="../Documents/Certificado HTML.pdf" target="_blank">Ver certificado</a>
-                    </li>
-                    <li>Curso de Python Básico - Midudev.
-                        <a href="../Documents/Certificado Python.pdf" target="_blank">Ver certificado</a>
-                    </li>
-                </ul>
+            <article class="study-article study-courses">
+
+                <div class="study-header">
+                    <h3 class="study-article-title">Cursos y certificaciones</h3>
+                </div>
+
+                <div class="study-list-div div-html">
+                    <span>
+                        HTML Básico - Midudev.
+                    </span>
+                    <a href="../Documents/Certificado HTML.pdf" target="_blank">Ver certificado</a>
+                </div>
+
+                <div class="study-list-div div-python">
+                    <span>
+                        Python Básico - Midudev.
+                    </span>
+                    <a href="../Documents/Certificado Python.pdf" target="_blank">Ver certificado</a>
+                </div>
+
             </article>
 
         </section>
 
         <!-- ======== IDIOMAS ======== -->
         <section id="idiomas" class="about-section">
-            <h2 class="idioms-tittle">Idiomas</h2>
-            <ul>
-                <li><strong>Español:</strong> Nativo.</li>
-                <li><strong>Inglés:</strong> Nivel Intermedio (B1) - En progreso.</li>
-            </ul>
+            <h2 class="idioms-title">Idiomas</h2>
+
+            <div class="language-item">
+
+                <div class="language-header">
+                    <span class="language-name">Español</span>
+                    <span class="language-level">Nativo</span>
+                </div>
+
+                <div class="language-bar">
+                    <span class="language-progress spanish"></span>
+                </div>
+
+            </div>
+
+            <div class="language-item">
+
+                <div class="language-header">
+                    <span class="language-name">Ingles</span>
+                    <span class="language-level">Intermedio (B1)</span>
+                </div>
+
+                <div class="language-bar">
+                    <span class="language-progress english"></span>
+                </div>
+
+            </div>
+
         </section>
 
         <!-- ======== EXPERIENCIA ======== -->
         <section id="experiencia" class="about-section">
-            <h2 class="experience-tittle">Experiencia</h2>
+            <h2 class="experience-title">Experiencia</h2>
             <article class="experience-article">
 
-                <div class="experience-tittle-div">
-                    <h3 class="experience-article-tittle">Bodeguero Online</h3>
+                <div class="experience-title-div">
+                    <h3 class="experience-article-title">Bodeguero Online</h3>
                     <span class="experience-date">Nov 2024 - Dic 2024</span>
                 </div>
 
@@ -114,8 +166,8 @@
 
             <article class="experience-article">
 
-                <div class="experience-tittle-div">
-                    <h3 class="experience-article-tittle">Practicante de Desarrollo de Software</h3>
+                <div class="experience-title-div">
+                    <h3 class="experience-article-title">Practicante de Desarrollo de Software</h3>
                     <span class="experience-date">Mar 2025 - Sep 2025</span>
                 </div>
 
@@ -124,8 +176,8 @@
                 <p class="job-description">Desarrollé una aplicación para el registro de las horas trabajadas por los empleados, 
                     lo que optimizó el tiempo de registro en un 25%. 
                     Esto también incluyó la centralización de datos y el análisis de la información.
-                </p class="job-description">
-                <p>Además, desarrollé una aplicación basada en tickets para registrar solicitudes de permisos, 
+                </p>
+                <p class="job-description">Además, desarrollé una aplicación basada en tickets para registrar solicitudes de permisos, 
                     lo que eliminó el uso de formularios en papel, logrando una reducción del 100 % en el consumo de papel.
                 </p>
 
