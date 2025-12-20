@@ -10,6 +10,18 @@
     }
 }
 
+/* ANIMACIÓN DE SUBIDA DE OBJETOS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ANIMACIÓN DE DIBUJO DE BORDE */
 @keyframes drawBorder {
     0% {
@@ -39,5 +51,17 @@
         opacity: 1;
         transform: translateY(0);
         filter: blur(0);
+    }
+}
+
+/* ANIMACIÓN DE REVELADO DE SKILLS */
+@keyframes revealScroll {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
