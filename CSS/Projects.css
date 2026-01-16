@@ -3,10 +3,18 @@ main {
     animation: fadeUp 0.8s ease-out both;
 }
 
+.carousel,
+.projects-card,
+.coming-soon-overlay {
+    user-select: none;
+}
+
 #proyectos {
     max-width: 900px;
     margin: 0 auto 120px;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .my-projects {
@@ -57,6 +65,7 @@ main {
     font-size: 1.05rem;
     font-weight: 500;
     text-align: center;
+    margin: 0 0 16px 0;
 }
 
 .project-description-div {
@@ -79,44 +88,6 @@ main {
     & span {
         font-weight: 500;
         opacity: 0.85;
-    }
-}
-
-/* FOOTER STYLES */
-.footer-about {
-    padding-top: 35px;
-}
-
-#contacto {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: var(--paper-beige);
-    background-color: rgba(255,255,255,0.15);
-    transition: 
-        transform 0.18s cubic-bezier(.34,1.56,.64,1),
-        box-shadow 0.25s ease-out,
-        filter 0.25s ease-out;
-    &:hover {
-        transform: scale(0.92) rotate(-4deg);
-
-        box-shadow:
-            0 0 0 1.5px var(--paper-beige);
-        fill: var(--oni-black);
-    }
-
-    & svg{
-        width: 20px;
-        height: 20px;
     }
 }
 
@@ -158,6 +129,8 @@ main {
 .coming-soon-icon {
     font-size: 3rem;
     animation: coming-soon-bounce 2s ease-in-out infinite;
+    width: 3rem;
+    height: 3rem;
 }
 
 .lock-icon {
@@ -188,7 +161,12 @@ main {
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
-    
+    cursor: grab;
+    box-sizing: border-box;
+}
+
+.carousel:active {
+    cursor: grabbing;
 }
 
 .carousel::-webkit-scrollbar-thumb {
@@ -205,4 +183,294 @@ main {
     align-items: center;
     width: max-content;
     padding: 0 20px;
+}
+
+/* FOOTER STYLES */
+.footer-about {
+    padding-top: 35px;
+}
+
+#contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--paper-beige);
+    background-color: rgba(255,255,255,0.15);
+    transition: 
+        transform 0.18s cubic-bezier(.34,1.56,.64,1),
+        box-shadow 0.25s ease-out,
+        filter 0.25s ease-out;
+    &:hover {
+        transform: scale(0.92) rotate(-4deg);
+
+        box-shadow:
+            0 0 0 1.5px var(--paper-beige);
+        fill: var(--oni-black);
+    }
+
+    & svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+/* Tablets (768px - 1124px) */
+@media (max-width: 1124px) {
+
+    #proyectos {
+        max-width: 100%;
+        margin: 0 auto 100px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .carousel {
+        width: 45%;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .personal-projects .carousel-inner {
+        justify-content: center;
+    }
+
+    .project-article {
+        width: 300px;
+        height: 400px;
+        margin: 10px 8px;
+        flex-shrink: 0;
+    }
+
+    .projects-card {
+        padding: 18px 22px;
+    }
+
+    .project-name {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .project-technologies {
+        font-size: 0.8rem;
+        padding: 8px;
+        margin-top: 24px;
+    }
+
+    .coming-soon-icon {
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .coming-soon-title {
+        font-size: 1.1rem;
+    }
+
+    .coming-soon-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+
+    #proyectos {
+        width: 100%;
+        margin: 0 auto 70px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .project-title-section {
+        margin-top: 35px;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .carousel {
+        width: 60%;
+        max-width: 70%;
+        height: 420px;
+        max-height: 450px;
+        margin: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
+
+    .personal-projects .carousel-inner {
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .professional-projects .project-article {
+        width: 280px;
+        height: 360px;
+        margin: 0 6px;
+        flex-shrink: 0;
+    }
+
+    .personal-projects .project-article {
+        width: 280px;
+        height: 360px;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
+    .projects-card {
+        padding: 16px 18px;
+        height: 100%;
+    }
+
+    .project-name {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        opacity: 0.9;
+    }
+
+    .project-technologies {
+        font-size: 0.75rem;
+        padding: 6px;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        position: static;
+    }
+
+    .coming-soon-overlay {
+        border-radius: 16px;
+        backdrop-filter: blur(1px);
+    }
+
+    .coming-soon-icon {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .coming-soon-title {
+        font-size: 1rem;
+    }
+
+    .coming-soon-text {
+        font-size: 0.8rem;
+    }
+
+    .coming-soon-content {
+        gap: 10px;
+    }
+}
+
+/* Small phones (under 480px) */
+@media (max-width: 479px) {
+
+    #proyectos {
+        margin: 0 auto 50px;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-title-section {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .carousel {
+        width: 70%;
+        max-width: 80%;
+        margin: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .carousel-inner {
+        padding: 0 6px;
+        width: max-content;
+    }
+
+    .personal-projects .carousel-inner {
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .professional-projects .project-article {
+        width: 260px;
+        height: 340px;
+        margin: 0 5px;
+        flex-shrink: 0;
+    }
+
+    .personal-projects .project-article {
+        width: 260px;
+        height: 340px;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
+    .projects-card {
+        padding: 14px 16px;
+        height: 100%;
+    }
+
+    .project-name {
+        max-width: 90%;
+        margin: auto;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .project-description {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+        opacity: 0.85;
+    }
+
+    .project-technologies {
+        font-size: 0.65rem;
+        padding: 4px;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        position: static;
+    }
+
+    .coming-soon-icon {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .coming-soon-title {
+        font-size: 0.9rem;
+    }
+
+    .coming-soon-text {
+        font-size: 0.7rem;
+    }
 }
