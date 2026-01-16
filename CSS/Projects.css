@@ -3,30 +3,45 @@ main {
     animation: fadeUp 0.8s ease-out both;
 }
 
+.carousel,
+.projects-card,
+.coming-soon-overlay {
+    user-select: none;
+}
+
 #proyectos {
     max-width: 900px;
     margin: 0 auto 120px;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.my-projects {
+    opacity: 0;
+    animation: revealScroll 1s ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
 }
 
 .project-title-section {
     text-align: center;
-    margin-bottom: 60px;
+    margin-top: 50px;
     letter-spacing: 2px;
     font-weight: 400;
 }
 
 .project-article {
-    margin-bottom: 40px;
-    opacity: 0;
-    transform: translateY(25px);
-
-    animation: revealScroll 1s ease-out both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 40%;
+    width: 350px;
+    height: 450px;
+    margin: 10px 15px;
+    scroll-snap-align: center;
+    transition: transform 0.35s ease;
 }
 
 .projects-card {
+    height: 80%;
+    justify-content: space-between;
     position: relative;
     padding: 26px 28px;
     border-radius: 18px;
@@ -49,7 +64,8 @@ main {
 .project-name {
     font-size: 1.05rem;
     font-weight: 500;
-    margin-bottom: 14px;
+    text-align: center;
+    margin: 0 0 16px 0;
 }
 
 .project-description-div {
@@ -63,7 +79,7 @@ main {
 }
 
 .project-technologies {
-    margin-top: 14px;
+    margin-top: 32px;
     font-size: 0.85rem;
     padding: 10px;
     border-top: 1.5px solid rgba(0, 0, 0, 0.08);
@@ -73,6 +89,100 @@ main {
         font-weight: 500;
         opacity: 0.85;
     }
+}
+
+/* Coming Soon Overlay */
+.project-coming-soon .projects-card {
+    opacity: 0.85;
+    border: 1.7px dashed rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.project-coming-soon .projects-card:hover {
+    transform: none;
+    box-shadow: 0 10px 26px -16px rgba(0, 0, 0, 0.45);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95));
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.coming-soon-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.coming-soon-icon {
+    font-size: 3rem;
+    animation: coming-soon-bounce 2s ease-in-out infinite;
+    width: 3rem;
+    height: 3rem;
+}
+
+.lock-icon {
+    animation: none;
+}
+
+.coming-soon-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.coming-soon-text {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 60vh;
+    margin: 0 auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.25) transparent;
+    cursor: grab;
+    box-sizing: border-box;
+}
+
+.carousel:active {
+    cursor: grabbing;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: var(--sumi-gray);
+    border-radius: 10px;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background-color: var(--sumi-gray);
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0 20px;
 }
 
 /* FOOTER STYLES */
@@ -110,5 +220,257 @@ main {
     & svg{
         width: 20px;
         height: 20px;
+    }
+}
+
+/* RESPONSIVE DESIGN */
+/* Tablets (768px - 1124px) */
+@media (max-width: 1124px) {
+
+    #proyectos {
+        max-width: 100%;
+        margin: 0 auto 100px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .carousel {
+        width: 45%;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .personal-projects .carousel-inner {
+        justify-content: center;
+    }
+
+    .project-article {
+        width: 300px;
+        height: 400px;
+        margin: 10px 8px;
+        flex-shrink: 0;
+    }
+
+    .projects-card {
+        padding: 18px 22px;
+    }
+
+    .project-name {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .project-technologies {
+        font-size: 0.8rem;
+        padding: 8px;
+        margin-top: 24px;
+    }
+
+    .coming-soon-icon {
+        font-size: 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .coming-soon-title {
+        font-size: 1.1rem;
+    }
+
+    .coming-soon-text {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+
+    #proyectos {
+        width: 100%;
+        margin: 0 auto 70px;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+
+    .project-title-section {
+        margin-top: 35px;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .carousel {
+        width: 60%;
+        max-width: 70%;
+        height: 420px;
+        max-height: 450px;
+        margin: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+    }
+
+    .personal-projects .carousel-inner {
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .professional-projects .project-article {
+        width: 280px;
+        height: 360px;
+        margin: 0 6px;
+        flex-shrink: 0;
+    }
+
+    .personal-projects .project-article {
+        width: 280px;
+        height: 360px;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
+    .projects-card {
+        padding: 16px 18px;
+        height: 100%;
+    }
+
+    .project-name {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .project-description {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        opacity: 0.9;
+    }
+
+    .project-technologies {
+        font-size: 0.75rem;
+        padding: 6px;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        position: static;
+    }
+
+    .coming-soon-overlay {
+        border-radius: 16px;
+        backdrop-filter: blur(1px);
+    }
+
+    .coming-soon-icon {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .coming-soon-title {
+        font-size: 1rem;
+    }
+
+    .coming-soon-text {
+        font-size: 0.8rem;
+    }
+
+    .coming-soon-content {
+        gap: 10px;
+    }
+}
+
+/* Small phones (under 480px) */
+@media (max-width: 479px) {
+
+    #proyectos {
+        margin: 0 auto 50px;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-title-section {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .carousel {
+        width: 70%;
+        max-width: 80%;
+        margin: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .carousel-inner {
+        padding: 0 6px;
+        width: max-content;
+    }
+
+    .personal-projects .carousel-inner {
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .professional-projects .project-article {
+        width: 260px;
+        height: 340px;
+        margin: 0 5px;
+        flex-shrink: 0;
+    }
+
+    .personal-projects .project-article {
+        width: 260px;
+        height: 340px;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
+    .projects-card {
+        padding: 14px 16px;
+        height: 100%;
+    }
+
+    .project-name {
+        max-width: 90%;
+        margin: auto;
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    .project-description {
+        font-size: 0.7rem;
+        margin-bottom: 3px;
+        opacity: 0.85;
+    }
+
+    .project-technologies {
+        font-size: 0.65rem;
+        padding: 4px;
+        margin-top: 32px;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        position: static;
+    }
+
+    .coming-soon-icon {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .coming-soon-title {
+        font-size: 0.9rem;
+    }
+
+    .coming-soon-text {
+        font-size: 0.7rem;
     }
 }
