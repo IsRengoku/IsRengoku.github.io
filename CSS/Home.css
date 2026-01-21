@@ -1,4 +1,13 @@
 /* CARD STYLES */
+html, body {
+    height: 100%;
+}
+
+main {
+    min-height: 100vh;
+}
+
+
 .intro-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -248,7 +257,7 @@
     }
 
     .card-description {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         position: relative;
         left: 0;
@@ -267,7 +276,7 @@
     }
 
     .card-photo {
-        width: 100%;
+        width: 50%;
         position: relative;
         left: 0;
         padding: 18px;
@@ -325,7 +334,7 @@
     }
 
     .card-description {
-        width: 100%;
+        width: 80%;
         max-width: 100%;
         position: relative;
         left: 0;
@@ -348,7 +357,7 @@
     }
 
     .card-photo {
-        width: 100%;
+        width: 60%;
         position: relative;
         left: 0;
         padding: 14px;
