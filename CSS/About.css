@@ -415,8 +415,9 @@ main {
 /* RESPONSIVE DESIGN */
 /* Tablets (768px - 1124px) */
 @media (max-width: 1124px) {
+
     .about-section {
-        max-width: 100%;
+        max-width: 80%;
         margin: 0 auto 70px;
         padding: 22px;
     }
@@ -496,7 +497,7 @@ main {
 /* Mobile devices (480px - 767px) */
 @media (max-width: 767px) {
     .about-section {
-        max-width: 100%;
+        max-width: 80%;
         margin: 0 auto 60px;
         padding: 18px;
     }
@@ -652,7 +653,7 @@ main {
 /* Small phones (under 480px) */
 @media (max-width: 479px) {
     .about-section {
-        max-width: 100%;
+        max-width: 80%;
         margin: 0 auto 50px;
         padding: 14px;
     }

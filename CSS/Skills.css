@@ -261,6 +261,7 @@ main {
 
 /* Mobile devices (480px - 767px) */
 @media (max-width: 767px) {
+    
     .skills-section {
         width: 100%;
         max-width: 100%;
@@ -297,14 +298,14 @@ main {
     }
 
     .skill-card {
-        width: 140px;
-        height: 120px;
+        width: 80px;
+        height: 70px;
         padding: 10px;
     }
 
     .skill-icon {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .soft-skills-div {
@@ -326,6 +327,10 @@ main {
     .icon svg {
         width: 16px;
         height: 16px;
+    }
+
+    .git {
+        gap: 6px;
     }
 }
 
@@ -367,18 +372,14 @@ main {
     }
 
     .skill-card {
-        width: 120px;
-        height: 105px;
+        width: 60px;
+        height: 60px;
         padding: 8px;
     }
 
     .skill-icon {
-        width: 45px;
-        height: 45px;
-    }
-
-    .git {
-        gap: 16px;
+        width: 35px;
+        height: 35px;
     }
 
     .skills-principles {
