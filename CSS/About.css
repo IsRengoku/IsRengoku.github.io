@@ -411,3 +411,422 @@ main {
         height: 20px;
     }
 }
+
+/* RESPONSIVE DESIGN */
+/* Tablets (768px - 1124px) */
+@media (max-width: 1124px) {
+    .about-section {
+        max-width: 100%;
+        margin: 0 auto 70px;
+        padding: 22px;
+    }
+
+    .about-section h2 {
+        font-size: 1.3rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 24px;
+        padding-bottom: 14px;
+        padding-left: 12px;
+    }
+
+    .about-description {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        max-width: 100%;
+        margin-bottom: 14px;
+    }
+
+    .study-article {
+        padding: 14px;
+        margin-bottom: 24px;
+    }
+
+    .study-article-title {
+        font-size: 0.95rem;
+    }
+
+    .study-date {
+        font-size: 0.8rem;
+    }
+
+    .study-article-inst {
+        font-size: 0.85rem;
+    }
+
+    .experience-article {
+        padding: 8px 8px 22px 8px;
+        margin-bottom: 22px;
+    }
+
+    .experience-article-title {
+        font-size: 0.95rem;
+    }
+
+    .experience-date {
+        font-size: 0.8rem;
+    }
+
+    .corporation-name {
+        font-size: 0.85rem;
+    }
+
+    .language-item {
+        margin-bottom: 20px;
+    }
+
+    .language-name {
+        font-size: 0.95rem;
+    }
+
+    .language-level {
+        font-size: 0.8rem;
+    }
+
+    .icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+    .about-section {
+        max-width: 100%;
+        margin: 0 auto 60px;
+        padding: 18px;
+    }
+
+    .about-section:first-child {
+        margin-top: 30px;
+    }
+
+    .about-section h2 {
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        padding-left: 10px;
+    }
+
+    .about-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .study-article {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    .study-article::before {
+        left: 0;
+        top: 6px;
+        height: calc(100% - 12px);
+    }
+
+    .study-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    .study-article-title {
+        font-size: 0.9rem;
+    }
+
+    .study-date {
+        padding-left: 0;
+        border-left: none;
+        font-size: 0.75rem;
+        margin-top: 4px;
+    }
+
+    .study-article-inst {
+        font-size: 0.8rem;
+    }
+
+    .study-list-div {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 8px;
+    }
+
+    .study-list-div span {
+        padding-left: 0;
+        font-size: 0.8rem;
+    }
+
+    .study-list-div a {
+        padding-right: 0;
+        font-size: 0.75rem;
+    }
+
+    .div-html,
+    .div-python {
+        padding: 4px;
+    }
+
+    .experience-article {
+        padding: 8px 8px 18px 8px;
+        margin-bottom: 18px;
+    }
+
+    .experience-article::before {
+        left: 0;
+        top: 6px;
+        height: calc(100% - 12px);
+    }
+
+    .experience-title-div {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    .experience-article-title {
+        font-size: 0.9rem;
+    }
+
+    .experience-date {
+        padding-left: 0;
+        border-left: none;
+        font-size: 0.75rem;
+        margin-top: 4px;
+    }
+
+    .corporation-name {
+        font-size: 0.8rem;
+    }
+
+    .job-description {
+        padding-left: 10px;
+        font-size: 0.85rem;
+    }
+
+    .job-description p {
+        margin: 6px 0 0 0;
+        line-height: 1.5;
+    }
+
+    .language-item {
+        margin-bottom: 16px;
+        padding-left: 10px;
+    }
+
+    .language-item::before {
+        left: 0;
+        height: 100%;
+    }
+
+    .language-name {
+        font-size: 0.9rem;
+    }
+
+    .language-level {
+        font-size: 0.75rem;
+    }
+
+    .language-bar {
+        height: 5px;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        gap: 15px;
+    }
+
+    .icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Small phones (under 480px) */
+@media (max-width: 479px) {
+    .about-section {
+        max-width: 100%;
+        margin: 0 auto 50px;
+        padding: 14px;
+    }
+
+    .about-section:first-child {
+        margin-top: 25px;
+    }
+
+    .about-section h2 {
+        font-size: 1rem;
+        letter-spacing: 0.6px;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        padding-left: 8px;
+    }
+
+    .about-section h2::after {
+        font-size: 0.75rem;
+        margin-left: 8px;
+    }
+
+    .about-description {
+        font-size: 0.8rem;
+        line-height: 1.45;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .study-article {
+        padding: 10px;
+        margin-bottom: 16px;
+    }
+
+    .study-article::before {
+        left: 0;
+        top: 4px;
+        height: calc(100% - 8px);
+    }
+
+    .study-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3px;
+    }
+
+    .study-article-title {
+        font-size: 0.8rem;
+    }
+
+    .study-date {
+        padding-left: 0;
+        border-left: none;
+        font-size: 0.7rem;
+        margin-top: 2px;
+    }
+
+    .study-article-inst {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+
+    .study-article-status {
+        font-size: 0.75rem;
+    }
+
+    .study-list-div {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 6px;
+    }
+
+    .study-list-div span {
+        padding: 4px 0;
+        font-size: 0.75rem;
+    }
+
+    .study-list-div a {
+        padding-right: 0;
+        font-size: 0.7rem;
+    }
+
+    .div-html,
+    .div-python {
+        padding: 3px;
+    }
+
+    .experience-article {
+        padding: 6px 6px 14px 6px;
+        margin-bottom: 14px;
+    }
+
+    .experience-article::before {
+        left: 0;
+        top: 4px;
+        height: calc(100% - 8px);
+    }
+
+    .experience-article p {
+        margin: 6px 0 0 0;
+        line-height: 1.4;
+        font-size: 0.75rem;
+    }
+
+    .experience-title-div {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3px;
+    }
+
+    .experience-article-title {
+        font-size: 0.8rem;
+    }
+
+    .experience-date {
+        padding-left: 0;
+        border-left: none;
+        font-size: 0.7rem;
+        margin-top: 2px;
+    }
+
+    .corporation-name {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+
+    .job-description {
+        padding-left: 8px;
+        font-size: 0.75rem;
+    }
+
+    .language-item {
+        margin-bottom: 12px;
+        padding-left: 8px;
+    }
+
+    .language-item::before {
+        left: 0;
+        height: 100%;
+    }
+
+    .language-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .language-name {
+        font-size: 0.8rem;
+    }
+
+    .language-level {
+        font-size: 0.7rem;
+        margin-top: 2px;
+    }
+
+    .language-bar {
+        height: 4px;
+        margin-top: 4px;
+    }
+
+    .footer-about {
+        padding-top: 25px;
+    }
+
+    #contacto {
+        gap: 12px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .icon svg {
+        width: 14px;
+        height: 14px;
+    }
+}
