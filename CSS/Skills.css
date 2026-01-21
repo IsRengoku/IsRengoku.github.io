@@ -204,3 +204,209 @@ main {
         height: 20px;
     }
 }
+
+/* RESPONSIVE DESIGN */
+/* Tablets (768px - 1124px) */
+@media (max-width: 1124px) {
+    .skills-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 70px;
+        padding: 18px;
+    }
+
+    .skills-title {
+        font-size: 1.3rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 28px;
+    }
+
+    .skills-group-title {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 12px;
+    }
+
+    .skill-card {
+        width: 160px;
+        height: 130px;
+        padding: 12px;
+    }
+
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .soft-skill {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+
+    .icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+    .skills-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 60px;
+        padding: 16px;
+    }
+
+    .skills-title {
+        font-size: 1.15rem;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .skills-group {
+        &:not(:last-child)::after {
+            width: 30px;
+            margin: 30px auto 0;
+        }
+    }
+
+    .skills-group-title {
+        font-size: 0.9rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 18px;
+
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 10px;
+    }
+
+    .skill-card {
+        width: 140px;
+        height: 120px;
+        padding: 10px;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .soft-skills-div {
+        gap: 10px;
+        margin-top: 14px;
+    }
+
+    .soft-skill {
+        padding: 7px 12px;
+        font-size: 0.7rem;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        gap: 15px;
+    }
+
+    .icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Small phones (under 480px) */
+@media (max-width: 479px) {
+    .skills-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 50px;
+        padding: 12px;
+    }
+
+    .skills-title {
+        font-size: 1rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 18px;
+    }
+
+    .skills-group {
+        &:not(:last-child)::after {
+            width: 25px;
+            margin: 25px auto 0;
+        }
+    }
+
+    .skills-group-title {
+        font-size: 0.85rem;
+        letter-spacing: 0.6px;
+        margin-bottom: 14px;
+
+        &:first-child {
+            margin-top: 14px;
+        }
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+        gap: 8px;
+    }
+
+    .skill-card {
+        width: 120px;
+        height: 105px;
+        padding: 8px;
+    }
+
+    .skill-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .git {
+        gap: 16px;
+    }
+
+    .skills-principles {
+        margin-bottom: 80px;
+        padding-left: 0;
+    }
+
+    .soft-skills-div {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .soft-skill {
+        padding: 6px 10px;
+        font-size: 0.65rem;
+    }
+
+    #contacto {
+        gap: 15px;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .icon svg {
+        width: 14px;
+        height: 14px;
+    }
+}

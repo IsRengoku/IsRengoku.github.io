@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
         "description description photo"
-        ". . seals";
+        ". seals photo";
     align-items: center;
     gap: 15px;
     padding: 30px;
@@ -76,7 +76,7 @@
     grid-area: photo;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-self: start;
     background-color: rgba(0, 0, 0, .09);
     padding: 30px;
     box-shadow: 
@@ -109,8 +109,9 @@
 .intro-seals {
     grid-area: seals;
     display: flex;
-    justify-content: left;
+    align-items: center;
     gap: 15px;
+    margin: -80px auto 100px 300px;
 }
 
 .seal {
@@ -145,10 +146,6 @@
 
 .seal-email {
     border-color: var(--orange-red);
-    position: relative;
-    margin-top: 30px;
-    top: -80px;
-    left: 320px;
 
     &:hover {
         outline: 2px dashed transparent;
@@ -159,10 +156,6 @@
 
 .seal-linkedin {
     border-color: var(--deep-blue);
-    position: relative;
-    margin-top: 30px;
-    top: -80px;
-    left: 320px;
 
     &:hover {
         outline: 2px dashed transparent;
@@ -173,14 +166,226 @@
 
 .seal-github {
     border-color: var(--oni-black);
-    position: relative;
-    margin-top: 30px;
-    top: -80px;
-    left: 320px;
 
     &:hover {
         outline: 2px dashed transparent;
         outline-offset: -4px;
         mask-image: radial-gradient(circle, white 60%, transparent 100%);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+/* Tablets (768px - 1124px) */
+@media (max-width: 1124px) {
+
+    main {
+        height: auto;
+        min-height: unset;
+    }
+
+    .intro-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "description photo"
+            "seals seals";
+        gap: 60px;
+        padding: 25px;
+        align-content: start;
+    }
+
+    .card-description {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        padding: 20px;
+    }
+
+    .card-photo {
+        left: 0;
+        padding: 20px;
+        align-self: center;
+    }
+
+    .intro-seals {
+        grid-area: seals;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin: 0 auto;
+        padding-top: 10px;
+    }
+
+    .seal {
+        width: 45px;
+        height: 45px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 20px;
+    }
+
+    .profile-picture {
+        filter: contrast(1.05) saturate(1.1);
+    }
+}
+
+/* Mobile devices (480px - 767px) */
+@media (max-width: 767px) {
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 18px;
+        padding-bottom: 0;
+    }
+
+    .card {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .card-description {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        left: 0;
+        padding: 18px;
+        grid-area: unset;
+    }
+
+    .card-description .intro-title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .card-description p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .card-photo {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 18px;
+        grid-area: unset;
+    }
+
+    .profile-picture {
+        max-height: 280px;
+        filter: contrast(1.05) saturate(1.1);
+    }
+
+    .intro-seals {
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .seal {
+        width: 42px;
+        height: 42px;
+        margin-top: 0 !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .seal-email,
+    .seal-linkedin,
+    .seal-github {
+        position: relative;
+        margin-top: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .icon {
+        width: 22px;
+        height: 18px;
+    }
+}
+
+/* Small phones (under 480px) */
+@media (max-width: 479px) {
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 14px;
+        padding-bottom: 0;
+    }
+
+    .card {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .card-description {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        left: 0;
+        padding: 14px;
+        grid-area: unset;
+    }
+
+    .card-description .intro-title {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .card-description p {
+        font-size: 0.8rem;
+        line-height: 1.45;
+    }
+
+    .card-description .key-words {
+        font-weight: 700;
+    }
+
+    .card-photo {
+        width: 100%;
+        position: relative;
+        left: 0;
+        padding: 14px;
+        grid-area: unset;
+    }
+
+    .profile-picture {
+        max-height: 220px;
+        filter: contrast(1.05) saturate(1.1);
+    }
+
+    .intro-seals {
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .seal {
+        width: 38px;
+        height: 38px;
+        margin-top: 0 !important;
+        top: 0 !important;
+        left: 0 !important;
+    }
+
+    .seal-email,
+    .seal-linkedin,
+    .seal-github {
+        position: relative;
+        margin-top: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .icon {
+        width: 20px;
+        height: 16px;
+        margin-bottom: 8px;
     }
 }
